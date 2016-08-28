@@ -7,6 +7,8 @@ call plug#begin()
   Plug 'slim-template/vim-slim'
   Plug 'elixir-lang/vim-elixir'
   Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-eunuch'
+  Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Tabulation
@@ -20,11 +22,17 @@ autocmd Filetype ruby set colorcolumn=100
 inoremap jj <Esc>
 let mapleader=","
 
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
+
+" Set to auto read when a file is changed from the outside
+set autoread
 
 " Enable filetype plugins
 filetype plugin on
@@ -115,4 +123,13 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""'""""""""
+" => NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = 'right'
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$']
+let g:NERDTreeWinSize=35
+map <leader>nn :NERDTreeToggle<cr>
 
