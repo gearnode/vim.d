@@ -9,6 +9,7 @@ call plug#begin()
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-eunuch'
   Plug 'scrooloose/nerdtree'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Tabulation
@@ -21,9 +22,6 @@ autocmd Filetype ruby set colorcolumn=100
 
 inoremap jj <Esc>
 let mapleader=","
-
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
