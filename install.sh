@@ -1,5 +1,5 @@
 DOWNLOAD_URL=https://github.com/gearnode/vim.d.git
-INSTALL_PATH=~dotfiles/vimconfig
+INSTALL_PATH=~dotfiles/vimconfig/
 
 mkdir -p $INSTALL_PATH
 git clone $DOWNLOAD_URL $INSTALL_PATH
