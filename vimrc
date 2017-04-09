@@ -3,12 +3,11 @@ call plug#begin()
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'rking/ag.vim'
-  Plug 'junegunn/goyo.vim' "@see https://github.com/junegunn/goyo.vim
+  Plug 'junegunn/goyo.vim' " ZENMODE
   Plug 'slim-template/vim-slim'
   Plug 'elixir-lang/vim-elixir'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-eunuch'
-  Plug 'scrooloose/nerdtree'
   Plug 'airblade/vim-gitgutter'
 call plug#end()
 
@@ -127,13 +126,3 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""'""""""""
-" => NERDTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = 'right'
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\~$']
-let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-
