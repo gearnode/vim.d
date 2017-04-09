@@ -18,6 +18,7 @@ set expandtab
 
 " Ruby config
 autocmd Filetype ruby set colorcolumn=100
+autocmd BufNewFile,BufRead Brewfile set filetype=ruby
 
 inoremap jj <Esc>
 let mapleader=","
