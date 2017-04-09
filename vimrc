@@ -52,6 +52,16 @@ map <leader>f :FZF<CR>
 map <leader>s :w<CR>
 map <leader>b :Buffers<CR>
 
+" Disable key up/down/left/right
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
