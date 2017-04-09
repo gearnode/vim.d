@@ -7,9 +7,10 @@ mkdir -p $INSTALL_PATH
 git clone $DOWNLOAD_URL $INSTALL_PATH
 mv $HOME/.vim $HOME/.vim_copy
 mv $INSTALL_PATH $HOME/.vim
+vim -c PlugInstall -c q -c q
 
-echo "Lauch vim and type :PlugInstall"
-read -p "Do you have any errors? (Y/n):" response
+echo "Open vim instance and check you don't have any problem"
+read -p "OK (Y/n):" response
 if [ "$response" == "y" ] || [[ -z "${response// }" ]]; then
   rm -rf $HOME/.vim_copy
   echo "Your vim configuration is updated !"
