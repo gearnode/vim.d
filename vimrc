@@ -9,6 +9,8 @@ call plug#begin()
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-eunuch'
   Plug 'airblade/vim-gitgutter'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Tabulation
@@ -44,6 +46,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+map <leader>f :FZF<CR>
+map <leader>b :Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
