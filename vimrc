@@ -49,6 +49,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 map <leader>f :FZF<CR>
+map <leader>s :w<CR>
 map <leader>b :Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
