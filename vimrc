@@ -12,7 +12,12 @@ call plug#begin()
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'w0rp/ale'
+  Plug 'hashivim/vim-terraform'
 call plug#end()
+
+" Terraform
+let g:terraform_align=1
+autocmd FileType terraform setlocal commentstring=#%s
 
 " Tabulation
 set tabstop=2
@@ -21,6 +26,7 @@ set expandtab
 
 " Ruby config
 autocmd Filetype ruby set colorcolumn=100
+autocmd Filetype python set colorcolumn=120
 autocmd BufNewFile,BufRead Brewfile set filetype=ruby
 
 inoremap jj <Esc>
@@ -140,3 +146,6 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+autocmd FileType * setlocal formatoptions-=o formatoptions-=r
