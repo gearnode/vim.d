@@ -84,6 +84,7 @@ set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 set number
+set relativenumber
 
 "Always show current position
 set ruler
