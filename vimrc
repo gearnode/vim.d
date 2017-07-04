@@ -55,8 +55,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 map <leader>f :FZF<CR>
-map <leader>s :w<CR>
 map <leader>b :Buffers<CR>
+
+" Copy and Past with the system clipboard
+noremap <leader>y "+y
+nmap <leader>p m`:set paste<cr>o<c-r>+<esc>:set nopaste<cr>``
+nmap <leader>P m`:set paste<cr>O<c-r>+<esc>:set nopaste<cr>``
 
 " Disable key up/down/left/right
 map <up> <nop>
