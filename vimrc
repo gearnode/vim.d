@@ -13,6 +13,9 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   Plug 'w0rp/ale'
   Plug 'hashivim/vim-terraform'
+  Plug 'google/vim-jsonnet'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
 " Terraform
@@ -84,7 +87,7 @@ set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 set number
-set relativenumber
+" set relativenumber
 
 "Always show current position
 set ruler
